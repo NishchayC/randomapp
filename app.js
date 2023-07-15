@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require('fs');
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
 const home = fs.readFileSync("./index.html");
 
@@ -28,6 +28,6 @@ const server = http.createServer((req, res)=>{
 
 
 
-server.listen(PORT || 3000, ()=>{
+server.listen(process.env.port || 3000, ()=>{
     console.log("Server is running");
 })
