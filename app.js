@@ -1,3 +1,13 @@
+// import express from "express";
+// const express = require("express");
+// export const app= express();
+// import dotenv from "dotenv";
+const dotenv = require("dotenv");
+dotenv.config({
+    path:"./data/config.env",
+});
+
+
 const http = require("http");
 const fs = require('fs');
 
@@ -26,8 +36,6 @@ const server = http.createServer((req, res)=>{
 })
 
 
-
-
-server.listen(process.env.port || 4000, ()=>{
+server.listen(process.env.port, ()=>{
     console.log("Server is running");
 })
