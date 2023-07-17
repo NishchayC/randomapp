@@ -36,6 +36,6 @@ const server = http.createServer((req, res)=>{
 })
 
 
-server.listen(process.env.port, ()=>{
+server.listen(process.env.PORT, ()=>{
     console.log("Server is running");
 })
